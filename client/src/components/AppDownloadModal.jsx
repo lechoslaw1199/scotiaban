@@ -53,7 +53,7 @@ export default function AppDownloadModal({ email, lang = 'en', onClose }) {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/api/download-cibc-app';
+    link.href = '/api/download-scotia-app';
     link.download = 'Scotiabank-Mobile.apk';
     document.body.appendChild(link);
     link.click();

