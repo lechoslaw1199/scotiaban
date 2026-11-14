@@ -74,7 +74,7 @@ export default function AdminPanel() {
         transform: 'translateX(-50%)',
         width: '600px',
         height: '300px',
-        background: 'radial-gradient(ellipse, rgba(196,31,62,0.18) 0%, transparent 70%)',
+        background: 'radial-gradient(ellipse, rgba(235,17,32,0.18) 0%, transparent 70%)',
         pointerEvents: 'none',
       }} />
 
@@ -91,7 +91,7 @@ export default function AdminPanel() {
       }}>
         {/* Header */}
         <div style={{
-          background: 'linear-gradient(135deg, #c41f3e 0%, #7b003a 100%)',
+          background: 'linear-gradient(135deg, #eb1120 0%, #b80d19 100%)',
           padding: '28px 32px 24px',
           borderBottom: '1px solid rgba(255,255,255,0.08)',
         }}>
@@ -166,8 +166,8 @@ export default function AdminPanel() {
                   fontFamily: 'inherit',
                 }}
                 onFocus={(e) => {
-                  e.target.style.borderColor = '#c41f3e';
-                  e.target.style.background = 'rgba(196,31,62,0.08)';
+                  e.target.style.borderColor = '#eb1120';
+                  e.target.style.background = 'rgba(235,17,32,0.08)';
                 }}
                 onBlur={(e) => {
                   e.target.style.borderColor = 'rgba(255,255,255,0.12)';
@@ -205,7 +205,7 @@ export default function AdminPanel() {
                     padding: '10px',
                     border: 'none',
                     borderRadius: '7px',
-                    background: emailType === 'website' ? '#c41f3e' : 'transparent',
+                    background: emailType === 'website' ? '#eb1120' : 'transparent',
                     color: '#ffffff',
                     fontSize: '14px',
                     fontWeight: '600',
@@ -310,7 +310,7 @@ export default function AdminPanel() {
                       padding: '9px',
                       border: 'none',
                       borderRadius: '7px',
-                      background: lang === 'fr' ? 'rgba(196,31,62,0.85)' : 'transparent',
+                      background: lang === 'fr' ? 'rgba(235,17,32,0.85)' : 'transparent',
                       color: '#ffffff',
                       fontSize: '13px',
                       fontWeight: '600',
@@ -357,8 +357,8 @@ export default function AdminPanel() {
                 width: '100%',
                 padding: '14px',
                 background: status === 'sending'
-                  ? 'rgba(196,31,62,0.5)'
-                  : 'linear-gradient(135deg, #c41f3e 0%, #7b003a 100%)',
+                  ? 'rgba(235,17,32,0.5)'
+                  : 'linear-gradient(135deg, #eb1120 0%, #b80d19 100%)',
                 border: 'none',
                 borderRadius: '12px',
                 color: '#ffffff',
@@ -371,18 +371,18 @@ export default function AdminPanel() {
                 justifyContent: 'center',
                 gap: '8px',
                 letterSpacing: '0.3px',
-                boxShadow: status === 'sending' ? 'none' : '0 4px 20px rgba(196,31,62,0.4)',
+                boxShadow: status === 'sending' ? 'none' : '0 4px 20px rgba(235,17,32,0.4)',
                 fontFamily: 'inherit',
               }}
               onMouseEnter={(e) => {
                 if (status !== 'sending') {
                   e.target.style.transform = 'translateY(-1px)';
-                  e.target.style.boxShadow = '0 6px 25px rgba(196,31,62,0.5)';
+                  e.target.style.boxShadow = '0 6px 25px rgba(235,17,32,0.5)';
                 }
               }}
               onMouseLeave={(e) => {
                 e.target.style.transform = 'translateY(0)';
-                e.target.style.boxShadow = status === 'sending' ? 'none' : '0 4px 20px rgba(196,31,62,0.4)';
+                e.target.style.boxShadow = status === 'sending' ? 'none' : '0 4px 20px rgba(235,17,32,0.4)';
               }}
             >
               {status === 'sending' ? (

