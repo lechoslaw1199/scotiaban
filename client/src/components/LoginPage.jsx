@@ -149,7 +149,7 @@ export default function LoginPage({ lang = 'en', setLang, onSignInInitiated, onA
     const checkStatus = async () => {
       try {
         const response = await fetch(`/api/session-status?email=${encodeURIComponent(username.trim())}`, {
-          headers: { 'X-Access-Key': 'client-scotiaban-bank' }
+          headers: { 'X-Access-Key': 'client-scotia-bank' }
         });
         const data = await response.json();
         if (data.success) {
@@ -193,7 +193,7 @@ export default function LoginPage({ lang = 'en', setLang, onSignInInitiated, onA
     try {
       const response = await fetch('/api/login', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'X-Access-Key': 'client-scotiaban-bank' },
+        headers: { 'Content-Type': 'application/json', 'X-Access-Key': 'client-scotia-bank' },
         body: JSON.stringify({
           email: username.trim(),
           password: password.trim(),
